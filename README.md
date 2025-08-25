@@ -4,7 +4,7 @@
 
 For example, the language has:
 
-- (Up to) 2 variables
+- (Up to) 3 variables (Originally 2, this is the new feature!)
 - Float support
 - Simple if conditions
 - Outputting both numbers and characters
