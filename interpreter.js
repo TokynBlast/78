@@ -1,7 +1,7 @@
 /*
-this is a full 78 interpreter written in js without any extra features
+this is a full 78 interpreter written in js, with extra features
 
-[v] All 78 features
+[v] All 78 features + 1 (Yes, just one.)
 [x] Networking features
 [x] Function support
   [x] Library support
@@ -25,6 +25,7 @@ if (!file) {
 let mainval = 0;
 let bakval = 0;
 
+let othval = 0;
 let gmult = 0;
 
 function runCodePiece(code, loop) {
@@ -57,6 +58,12 @@ function runCodePiece(code, loop) {
 				break;
 			case 'b':
 				mainval -= 8;
+				break;
+			case 'z':
+				othval += 8;
+				break;
+			case 'i':
+				othval -= 7;
 				break;
 			case 'g':
 				gmult++;
@@ -99,3 +106,4 @@ while(true) {
 		runCodePiece(input.split('!')[b], b % 2 == 1);
 	}
 }
+
